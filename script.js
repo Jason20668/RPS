@@ -10,63 +10,121 @@ function Computer = {
             imageChoice = 'IMGS/Rock.png';
             break;
         case 1:
-            return 'IMGS/Paper.png'
+            imageChoice = 'IMGS/Paper.png'
             break;
         case 2:
-            return 'IMGS/Scissors.png'
+            imageChoice = 'IMGS/Scissors.png'
             break;
         case 3:
-            return 'IMGS/Gun.png'
+            imageChoice = 'IMGS/Gun.png'
             break;
         case 4:
-            return 'IMGS/Rock.png'
+            imageChoice = 'IMGS/Rock.png'
             break;
         case 5:
-            return 'IMGS/Paper.png'
+            imageChoice = 'IMGS/Paper.png'
             break;
         case 6:
-            return 'IMGS/Scissors.png'
+            imageChoice = 'IMGS/Scissors.png'
             break;
-        }
+    }
 }
 Let computerChoice = Computer()
 
 
 //If statements for the choices
-if (userChoice === 'Rock' && computerChoice === 'Paper'){
+if (userChoice === 'Rock' && computerChoice === 'Paper') {
     return 'You Lose!'
-} else if (userChoice ==='Rock' && computerChoice === 'Rock'){
+} else if (userChoice === 'Rock' && computerChoice === 'Rock') {
     return 'You Tied!'
-} else if (userChoice ==='Rock' && computerChoice === 'Scissors'){
+} else if (userChoice === 'Rock' && computerChoice === 'Scissors') {
     return 'You Win!'
-} else if (userChoice ==='Rock' && computerChoice === 'Gun'){
+} else if (userChoice === 'Rock' && computerChoice === 'Gun') {
     return 'You Lose!'
 } else {
     return 'You Broke it Good Jorb'
 }
 
-if (userChoice === 'Paper' && computerChoice === 'Paper'){
+if (userChoice === 'Paper' && computerChoice === 'Paper') {
     return 'You Tied!'
-} else if (userChoice ==='Paper' && computerChoice === 'Rock'){
+} else if (userChoice === 'Paper' && computerChoice === 'Rock') {
     return 'You Win!'
-} else if (userChoice ==='Paper' && computerChoice === 'Scissors'){
+} else if (userChoice === 'Paper' && computerChoice === 'Scissors') {
     return 'You Lose!'
-} else if (userChoice ==='Paper' && computerChoice === 'Gun'){
+} else if (userChoice === 'Paper' && computerChoice === 'Gun') {
     return 'You Lose!'
 } else {
     return 'You Broke it Good Jorb'
 }
 
-if (userChoice === 'Scissors' && computerChoice === 'Paper'){
+if (userChoice === 'Scissors' && computerChoice === 'Paper') {
     return 'You Win!'
-} else if (userChoice ==='Scissors' && computerChoice === 'Rock'){
+} else if (userChoice === 'Scissors' && computerChoice === 'Rock') {
     return 'You Lose!'
-} else if (userChoice ==='Scissors' && computerChoice === 'Scissors'){
+} else if (userChoice === 'Scissors' && computerChoice === 'Scissors') {
     return 'You Tied!'
-} else if (userChoice ==='Scissors' && computerChoice === 'Gun'){
+} else if (userChoice === 'Scissors' && computerChoice === 'Gun') {
     return 'You Lose!'
 } else {
     return 'You Broke it Good Jorb'
 }
 
-onclick()
+
+
+//User choice buttons
+choiceRock() {
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Who wins:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+choicePaper() {
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Who wins:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+choiceScissors() {
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Who wins:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
