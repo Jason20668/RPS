@@ -68,3 +68,5 @@ if (userChoice === 'Scissors' && computerChoice === 'Paper'){
 } else {
     return 'You Broke it Good Jorb'
 }
+
+onclick()
