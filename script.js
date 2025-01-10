@@ -1,5 +1,9 @@
 // Get username prompt
-const userName = prompt('What\'s your name?');
+const userName = prompt('What is your name?');
+
+userName 
+? (Greet.innerText=`Hello, ${userName}`)
+: (Greet.innerText=`Your name is Jeremiah now hello Jeremiah`)
 
 //Puter choice
 function Computer() {
