@@ -1,130 +1,69 @@
-//Get username prompt
-const userName = prompt('Whats your name?')
+// Get username prompt
+const userName = prompt('What\'s your name?');
 
-//Get computers choice
-function Computer = {
-    let randomNumber = Math.floor(Math.random() * 7)
-    //All possible answers
+//Puter choice
+function Computer() {
+    let randomNumber = Math.floor(Math.random() * 3);
+    let imageChoice;
+    
     switch (randomNumber) {
         case 0:
             imageChoice = 'IMGS/Rock.png';
             break;
         case 1:
-            imageChoice = 'IMGS/Paper.png'
+            imageChoice = 'IMGS/Paper.png';
             break;
         case 2:
-            imageChoice = 'IMGS/Scissors.png'
-            break;
-        case 3:
-            imageChoice = 'IMGS/Gun.png'
-            break;
-        case 4:
-            imageChoice = 'IMGS/Rock.png'
-            break;
-        case 5:
-            imageChoice = 'IMGS/Paper.png'
-            break;
-        case 6:
-            imageChoice = 'IMGS/Scissors.png'
+            imageChoice = 'IMGS/Scissors.png';
             break;
     }
-}
-Let computerChoice = Computer()
-
-
-//If statements for the choices
-if (userChoice === 'Rock' && computerChoice === 'Paper') {
-    return 'You Lose!'
-} else if (userChoice === 'Rock' && computerChoice === 'Rock') {
-    return 'You Tied!'
-} else if (userChoice === 'Rock' && computerChoice === 'Scissors') {
-    return 'You Win!'
-} else if (userChoice === 'Rock' && computerChoice === 'Gun') {
-    return 'You Lose!'
-} else {
-    return 'You Broke it Good Jorb'
+    
+    return imageChoice; 
 }
 
-if (userChoice === 'Paper' && computerChoice === 'Paper') {
-    return 'You Tied!'
-} else if (userChoice === 'Paper' && computerChoice === 'Rock') {
-    return 'You Win!'
-} else if (userChoice === 'Paper' && computerChoice === 'Scissors') {
-    return 'You Lose!'
-} else if (userChoice === 'Paper' && computerChoice === 'Gun') {
-    return 'You Lose!'
-} else {
-    return 'You Broke it Good Jorb'
+// Game results
+function gameResult(userChoice, computerChoice) {
+    if (userChoice === 'Rock' && computerChoice === 'Paper') {
+        return 'You Lose!';
+    } else if (userChoice === 'Rock' && computerChoice === 'Rock') {
+        return 'You Tied!';
+    } else if (userChoice === 'Rock' && computerChoice === 'Scissors') {
+        return 'You Win!';
+    } else if (userChoice === 'Paper' && computerChoice === 'Paper') {
+        return 'You Tied!';
+    } else if (userChoice === 'Paper' && computerChoice === 'Rock') {
+        return 'You Win!';
+    } else if (userChoice === 'Paper' && computerChoice === 'Scissors') {
+        return 'You Lose!';
+    } else if (userChoice === 'Scissors' && computerChoice === 'Paper') {
+        return 'You Win!';
+    } else if (userChoice === 'Scissors' && computerChoice === 'Rock') {
+        return 'You Lose!';
+    } else if (userChoice === 'Scissors' && computerChoice === 'Scissors') {
+        return 'You Tied!';
+    }
 }
 
-if (userChoice === 'Scissors' && computerChoice === 'Paper') {
-    return 'You Win!'
-} else if (userChoice === 'Scissors' && computerChoice === 'Rock') {
-    return 'You Lose!'
-} else if (userChoice === 'Scissors' && computerChoice === 'Scissors') {
-    return 'You Tied!'
-} else if (userChoice === 'Scissors' && computerChoice === 'Gun') {
-    return 'You Lose!'
-} else {
-    return 'You Broke it Good Jorb'
+//User buttons
+function choiceRock() {
+    const userChoice = 'Rock';
+    const computerChoice = Computer(); 
+    const result = gameResult(userChoice, computerChoice); 
+    alert(result); 
+
+
 }
 
-
-
-//User choice buttons
-choiceRock() {
-    <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Who wins:</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+function choicePaper() {
+    const userChoice = 'Paper';
+    const computerChoice = Computer();
+    const result = gameResult(userChoice, computerChoice);
+    alert(result);
 }
 
-choicePaper() {
-    <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Who wins:</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-}
-
-choiceScissors() {
-    <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Who wins:</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+function choiceScissors() {
+    const userChoice = 'Scissors';
+    const computerChoice = Computer();
+    const result = gameResult(userChoice, computerChoice);
+    alert(result);
 }

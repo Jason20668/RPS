@@ -23,44 +23,47 @@
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col-6 text-center">
                 <h2 class="text-light fs-2" id="theirName">Username</h2>
             </div>
-            <div class="col">
+            <div class="col-6 text-center">
                 <h2 class="text-light fs-2">Computer</h2>
             </div>
         </div>
 
-<!--Win and Lose Buttons-->
-        <div class="row">
-            <div class="col">
-                <img id="buttonOne"></img>              
+        <!--Win and Lose Buttons-->
+        <div class="row d-flex float-left">
+            <div class="col-2">
+                <img id="buttonOne" class="justify-content-center" src="IMGS/Gray Button.png">
             </div>
-            <div class="col">
-                <img id="buttonTwo"></img>
+            <div class="col-2">
+                <img id="buttonTwo" class="justify-content-center" src="IMGS/Gray Button.png">
             </div>
-            <div class="col">
-                <img id="buttonThree"></img>
+            <div class="col-2">
+                <img id="buttonThree" class="justify-content-center" src="IMGS/Gray Button.png">
+            </div>
+        </div>
+        
+        <div class="row d-flex float-right">
+            <div class="col-2">
+                <img id="buttonFour" class="justify-content-center" src="IMGS/Gray Button.png">
+            </div>
+            <div class="col-2">
+                <img id="buttonFive" class="justify-content-center" src="IMGS/Gray Button.png">
+            </div>
+            <div class="col-2">
+                <img id="buttonSix" class="justify-content-center" src="IMGS/Gray Button.png">
             </div>
         </div>
 
-        <div class="row">
-            <div class="col">
-                <img id="buttonFour"></img>              
-            </div>
-            <div class="col">
-                <img id="buttonFive"></img>
-            </div>
-            <div class="col">
-                <img id="buttonSix"></img>
-            </div>
-        </div>
+        <h1 class="text-center text-light mt-4">Choose!</h1>
 
-<!--User Choices-->
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <div class="card ms-3 border border-1 border-success" style="width: 18rem;">
+
+        <!--User Choices-->
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="card ms-3 me-2 border border-1 border-success" style="width: 18rem;">
                         <img class="card-img-top img-fluid" src="IMGS/Rock.png">
                         <div class="card-body">
                             <div class="btn btn-success" style="width: 100%" onclick="choiceRock()">Rock</div>
@@ -68,8 +71,8 @@
                     </div>
                 </div>
 
-                <div class="col-4">
-                    <div class="card ms-3 border border-1 border-success" style="width: 18rem;">
+                <div class="col">
+                    <div class="card ms-3 me-2 border border-1 border-success" style="width: 18rem;">
                         <img class="card-img-top img-fluid" src="IMGS/Paper.png">
                         <div class="card-body">
                             <div class="btn btn-success" style="width: 100%" onclick="choicePaper()">Paper</div>
@@ -77,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col">
                     <div class="card ms-3 border border-1 border-success" style="width: 18rem;">
                         <img class="card-img-top img-fluid" src="IMGS/Scissors.png">
                         <div class="card-body">
@@ -86,18 +89,7 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
 
     </main>
