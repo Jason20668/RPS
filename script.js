@@ -1,15 +1,15 @@
 // Get username prompt
-const userName = prompt('What is your name?');
-
+const userName = prompt('What is your name?')
+let Greet = document.getElementById('greeting')
+//Put username in website
 userName 
-? (Greet.innerText=`Hello, ${userName}`)
-: (Greet.innerText=`Your name is Jeremiah now hello Jeremiah`)
+? (Greet.innerText=`${userName}`)
+: (Greet.innerText=`Pubert`)
+
 
 //Puter choice
 function Computer() {
     let randomNumber = Math.floor(Math.random() * 3);
-    let imageChoice;
-    
     switch (randomNumber) {
         case 0:
             imageChoice = 'IMGS/Rock.png';
@@ -27,30 +27,30 @@ function Computer() {
 
 // Game results
 function gameResult(userChoice, computerChoice) {
-    if (userChoice === 'Rock' && computerChoice === 'Paper') {
+    if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Paper.png') {
         return 'You Lose!';
-    } else if (userChoice === 'Rock' && computerChoice === 'Rock') {
+    } else if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Rock.png') {
         return 'You Tied!';
-    } else if (userChoice === 'Rock' && computerChoice === 'Scissors') {
+    } else if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Scissors.png') {
         return 'You Win!';
-    } else if (userChoice === 'Paper' && computerChoice === 'Paper') {
+    } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Paper.png') {
         return 'You Tied!';
-    } else if (userChoice === 'Paper' && computerChoice === 'Rock') {
+    } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Rock.png') {
         return 'You Win!';
-    } else if (userChoice === 'Paper' && computerChoice === 'Scissors') {
+    } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Scissors.png') {
         return 'You Lose!';
-    } else if (userChoice === 'Scissors' && computerChoice === 'Paper') {
+    } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Paper.png') {
         return 'You Win!';
-    } else if (userChoice === 'Scissors' && computerChoice === 'Rock') {
+    } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Rock.png') {
         return 'You Lose!';
-    } else if (userChoice === 'Scissors' && computerChoice === 'Scissors') {
+    } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Scissors.png') {
         return 'You Tied!';
     }
 }
 
 //User buttons
 function choiceRock() {
-    const userChoice = 'Rock';
+    const userChoice = 'IMGS/Rock.png';
     const computerChoice = Computer(); 
     const result = gameResult(userChoice, computerChoice); 
     alert(result); 
@@ -59,14 +59,14 @@ function choiceRock() {
 }
 
 function choicePaper() {
-    const userChoice = 'Paper';
+    const userChoice = 'IMGS/Paper.png';
     const computerChoice = Computer();
     const result = gameResult(userChoice, computerChoice);
     alert(result);
 }
 
 function choiceScissors() {
-    const userChoice = 'Scissors';
+    const userChoice = 'IMGS/Scissors.png';
     const computerChoice = Computer();
     const result = gameResult(userChoice, computerChoice);
     alert(result);
