@@ -62,7 +62,8 @@ function gameResult(userChoice, computerChoice) {
         imageFour.src = 'IMGS/GCircle.png'
         return 'You Lose!';
     } else if (userChoice === computerChoice) {
-            return 'You Tied!';
+        return 'You Tied!';
+    }
     }
 }
 
