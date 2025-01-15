@@ -25,26 +25,44 @@ function Computer() {
     return imageChoice; 
 }
 
+//Variables attached to my buttons
+let imageOne =document.getElementById('buttonOne')
+let imageTwo =document.getElementById('buttonTwo')
+let imageThree =document.getElementById('buttonThree')
+let imageFour =document.getElementById('buttonFour')
+let imageFive =document.getElementById('buttonFive')
+let imageSix =document.getElementById('buttonSix')
+
+
+let 
 // Game results
 function gameResult(userChoice, computerChoice) {
     if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Paper.png') {
+        imageOne.src = 'IMGS/RCircle.png';
+        imageFour.src = 'IMGS/GCircle.png';
         return 'You Lose!';
-    } else if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Rock.png') {
-        return 'You Tied!';
     } else if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Scissors.png') {
+        imageOne.src = 'IMGS/GCircle.png'
+        imageFour.src = 'IMGS/RCircle.png'
         return 'You Win!';
-    } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Paper.png') {
-        return 'You Tied!';
     } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Rock.png') {
+        imageOne.src = 'IMGS/GCircle.png'
+        imageFour.src = 'IMGS/RCircle.png'
         return 'You Win!';
     } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Scissors.png') {
+        imageOne.src = 'IMGS/RCircle.png'
+        imageFour.src = 'IMGS/GCircle.png'
         return 'You Lose!';
     } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Paper.png') {
+        imageOne.src = 'IMGS/GCircle.png'
+        imageFour.src = 'IMGS/RCircle.png'
         return 'You Win!';
     } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Rock.png') {
+        imageOne.src = 'IMGS/RCircle.png'
+        imageFour.src = 'IMGS/GCircle.png'
         return 'You Lose!';
-    } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Scissors.png') {
-        return 'You Tied!';
+    } else if (userChoice === computerChoice) {
+            return 'You Tied!';
     }
 }
 
