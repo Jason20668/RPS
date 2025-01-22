@@ -1,104 +1,98 @@
 // Get username prompt
-const userName = prompt('What is your name?')
-let Greet = document.getElementById('greeting')
-//Put username in website
+const userName = prompt('What is your name?');
+let Greet = document.getElementById('greeting');
+// Put username in website
 userName
     ? (Greet.innerText = `${userName}`)
-    : (Greet.innerText = `Pubert`)
+    : (Greet.innerText = `Pubert`);
 
-
-//Puter choice
+// Puter choice
 function Computer() {
     let randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
         case 0:
-            imageChoice = 'IMGS/Rock.png';
-            break;
+            return 'IMGS/Rock.png';
         case 1:
-            imageChoice = 'IMGS/Paper.png';
-            break;
+            return 'IMGS/Paper.png';
         case 2:
-            imageChoice = 'IMGS/Scissors.png';
-            break;
+            return 'IMGS/Scissors.png';
     }
-
-    return imageChoice;
 }
 
-//Variables attached to my buttons
-let imageOne = document.getElementById('buttonOne')
-let imageTwo = document.getElementById('buttonTwo')
-let imageThree = document.getElementById('buttonThree')
-let imageFour = document.getElementById('buttonFour')
-let imageFive = document.getElementById('buttonFive')
-let imageSix = document.getElementById('buttonSix')
+// Variables attached to my buttons
+let imageOne = document.getElementById('buttonOne');
+let imageTwo = document.getElementById('buttonTwo');
+let imageThree = document.getElementById('buttonThree');
+let imageFour = document.getElementById('buttonFour');
+let imageFive = document.getElementById('buttonFive');
+let imageSix = document.getElementById('buttonSix');
 let userScore = 0;
 let computerScore = 0;
 
-// Game results
-function gameResult(userChoice, computerChoice) {
-    if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Paper.png') {
-        computerScore += 1;
-        return 'You Lose!';
-
-    } else if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Scissors.png') {
-        userScore += 1;
-        return 'You Win!';
-
-    } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Rock.png') {
-        userScore += 1;
-        return 'You Win!';
-
-    } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Scissors.png') {
-        computerScore += 1;
-        return 'You Lose!';
-
-    } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Paper.png') {
-        userScore += 1;
-        return 'You Win!';
-
-    } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Rock.png') {
-        computerScore += 1;
-        return 'You Lose!';
-
-    } else if (userChoice === computerChoice) {
-        return 'You Tied!';
-    }
-
-    //Button image changing
+// Update score circle images
+function updateScoreImages() {
+    // Update user score
     if (userScore === 1) {
-        imageOne.src = 'IMGS/GCircle.png'
+        imageOne.src = 'IMGS/GCircle.png';
     } else if (userScore === 2) {
-        imageOne.src = 'IMGS/GCircle.png'
-        imageTwo.src = 'IMGS/GCircle.png'
+        imageTwo.src = 'IMGS/GCircle.png';
     } else if (userScore === 3) {
-        imageOne.src = 'IMGS/GCircle.png'
-        imageTwo.src = 'IMGS/GCircle.png'
-        imageThree.src = 'IMGS/GCircle.png'
+        imageThree.src = 'IMGS/GCircle.png';
+        alert('You beat the computer!');
     }
 
+    // Update computer score
     if (computerScore === 1) {
-        imageFour.src = 'IMGS/GCircle.png'
+        imageFour.src = 'IMGS/GCircle.png';
     } else if (computerScore === 2) {
-        imageFour.src = 'IMGS/GCircle.png'
-        imageFive.src = 'IMGS/GCircle.png'
+        imageFour.src = 'IMGS/GCircle.png';
+        imageFive.src = 'IMGS/GCircle.png';
     } else if (computerScore === 3) {
-        imageFour.src = 'IMGS/GCircle.png'
-        imageFive.src = 'IMGS/GCircle.png'
-        imageSix.src = 'IMGS/GCircle.png'
+        imageFour.src = 'IMGS/GCircle.png';
+        imageFive.src = 'IMGS/GCircle.png';
+        imageSix.src = 'IMGS/GCircle.png';
+        alert('You lost to the computer...loser');
     }
 }
 
+// Game results
+function gameResult(userChoice, computerChoice) {
+    let resultMessage = '';
 
+    if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Paper.png') {
+        computerScore += 1;
+        resultMessage = 'You Lose!';
+    } else if (userChoice === 'IMGS/Rock.png' && computerChoice === 'IMGS/Scissors.png') {
+        userScore += 1;
+        resultMessage = 'You Win!';
+    } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Rock.png') {
+        userScore += 1;
+        resultMessage = 'You Win!';
+    } else if (userChoice === 'IMGS/Paper.png' && computerChoice === 'IMGS/Scissors.png') {
+        computerScore += 1;
+        resultMessage = 'You Lose!';
+    } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Paper.png') {
+        userScore += 1;
+        resultMessage = 'You Win!';
+    } else if (userChoice === 'IMGS/Scissors.png' && computerChoice === 'IMGS/Rock.png') {
+        computerScore += 1;
+        resultMessage = 'You Lose!';
+    } else if (userChoice === computerChoice) {
+        resultMessage = 'You Tied!';
+    }
 
-//User buttons
+    // Update score circle images after each round
+    updateScoreImages();
+
+    return resultMessage;
+}
+
+// User buttons
 function choiceRock() {
     const userChoice = 'IMGS/Rock.png';
     const computerChoice = Computer();
     const result = gameResult(userChoice, computerChoice);
     alert(result);
-
-
 }
 
 function choicePaper() {
