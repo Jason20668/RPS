@@ -38,6 +38,8 @@ function updateScoreImages() {
         imageTwo.src = 'IMGS/GCircle.png';
     } else if (userScore === 3) {
         imageThree.src = 'IMGS/GCircle.png';
+        setTimeout(() => alert("You beat the computer!!!"), 750);
+        setTimeout(() => location.reload(), 1600); 
     }
 
     // Update computer score
@@ -47,6 +49,8 @@ function updateScoreImages() {
         imageFive.src = 'IMGS/GCircle.png';
     } else if (computerScore === 3) {
         imageSix.src = 'IMGS/GCircle.png';
+        setTimeout(() => alert("You lost to a computer...loser"), 750);
+        setTimeout(() => location.reload(), 1600); 
     }
 }
 
