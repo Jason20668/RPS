@@ -38,22 +38,19 @@ function updateScoreImages() {
         imageTwo.src = 'IMGS/GCircle.png';
     } else if (userScore === 3) {
         imageThree.src = 'IMGS/GCircle.png';
-        alert('You beat the computer!');
     }
 
     // Update computer score
     if (computerScore === 1) {
         imageFour.src = 'IMGS/GCircle.png';
     } else if (computerScore === 2) {
-        imageFour.src = 'IMGS/GCircle.png';
         imageFive.src = 'IMGS/GCircle.png';
     } else if (computerScore === 3) {
-        imageFour.src = 'IMGS/GCircle.png';
-        imageFive.src = 'IMGS/GCircle.png';
         imageSix.src = 'IMGS/GCircle.png';
-        alert('You lost to the computer...loser');
     }
 }
+
+
 
 // Game results
 function gameResult(userChoice, computerChoice) {
@@ -81,7 +78,7 @@ function gameResult(userChoice, computerChoice) {
         resultMessage = 'You Tied!';
     }
 
-    // Update score circle images after each round
+    // Update scores 
     updateScoreImages();
 
     return resultMessage;
