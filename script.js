@@ -36,20 +36,34 @@ function updateScoreImages() {
         imageOne.src = 'IMGS/GCircle.png';
     } else if (userScore === 2) {
         imageTwo.src = 'IMGS/GCircle.png';
-    } else if (userScore === 3) {
+    } else if (userScore === 3 && computerScore === 0) {
+        imageThree.src = 'IMGS/GCircle.png';
+        setTimeout(() => alert("You absolutely destroyed the computer!!!"), 750);
+        setTimeout(() => location.reload(), 1600); 
+    } else if (userScore === 3 && computerScore === 1) {
         imageThree.src = 'IMGS/GCircle.png';
         setTimeout(() => alert("You beat the computer!!!"), 750);
         setTimeout(() => location.reload(), 1600); 
-    }
-
+    } else if (userScore === 3 && computerScore === 2) {
+        imageThree.src = 'IMGS/GCircle.png';
+        setTimeout(() => alert("You almost lost you kinda suck. But congrats on still winning!!!"), 750);
+        setTimeout(() => location.reload(), 1600); 
     // Update computer score
     if (computerScore === 1) {
         imageFour.src = 'IMGS/GCircle.png';
     } else if (computerScore === 2) {
         imageFive.src = 'IMGS/GCircle.png';
-    } else if (computerScore === 3) {
+    } else if (computerScore === 3 && userScore === 0) {
         imageSix.src = 'IMGS/GCircle.png';
-        setTimeout(() => alert("You lost to a computer...loser"), 750);
+        setTimeout(() => alert("You got destroyed by a computer...loser"), 750);
+        setTimeout(() => location.reload(), 1600); 
+    } else if (computerScore === 3 && userScore === 1) {
+        imageSix.src = 'IMGS/GCircle.png';
+        setTimeout(() => alert("You only won one time damn you suck"), 750);
+        setTimeout(() => location.reload(), 1600); 
+    } else if (computerScore === 3 && userScore === 2) {
+        imageSix.src = 'IMGS/GCircle.png';
+        setTimeout(() => alert("At least you almost won...but you still suck"), 750);
         setTimeout(() => location.reload(), 1600); 
     }
 }
